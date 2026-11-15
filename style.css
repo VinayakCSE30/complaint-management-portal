@@ -1,0 +1,78 @@
+body {
+  font-family: Arial;
+  background-color: lightgray;
+  margin: 0px;
+}
+
+.top {
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.top a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.box {
+  background-color: white;
+  width: 75%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid gray;
+}
+
+h2 {
+  color: darkblue;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 95%;
+  padding: 6px;
+}
+
+button {
+  background-color: darkblue;
+  color: white;
+  padding: 8px 15px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: darkblue;
+  color: white;
+}
+
+.p { color: red; font-weight: bold; }
+.r { color: green; font-weight: bold; }
+
+.bottom {
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}

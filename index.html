@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top">
+        <h1>Complaint Management System</h1>
+        <a href="#home">Home</a> |
+        <a href="#reg">Register</a> |
+        <a href="#new">New Complaint</a> |
+        <a href="#track">Track & Admin</a>
+    </div>
+
+    <div id="home" class="box">
+        <h2>Home</h2>
+        <p>Welcome to our online complaint portal. Yahan aap apni problem register kar sakte hain aur uska status check kar sakte hain.</p>
+    </div>
+
+    <div id="reg" class="box">
+        <h2>Student / User Registration</h2>
+        <form>
+            <label>Name:</label>
+            <input type="text" id="n" placeholder="Enter your name">
+
+            <label>Email:</label>
+            <input type="email" id="e" placeholder="Enter your email">
+
+            <label>Password:</label>
+            <input type="password" id="p" placeholder="Create password">
+
+            <button type="button" onclick="register()">Register</button>
+        </form>
+    </div>
+
+    <div id="new" class="box">
+        <h2>Submit Complaint</h2>
+        <form>
+            <label>Problem Title:</label>
+            <input type="text" id="t" placeholder="Enter problem title">
+
+            <label>Department:</label>
+            <input type="text" id="d" placeholder="Enter department name">
+
+            <label>Details:</label>
+            <input type="text" id="desc" placeholder="Write problem details">
+
+            <label>Upload Photo/Proof:</label>
+            <input type="file" id="pic">
+
+            <button type="button" onclick="submitComp()">Submit Complaint</button>
+        </form>
+        <p id="showid"></p>
+    </div>
+
+    <div id="track" class="box">
+        <h2>Track Complaint & Admin Table</h2>
+        <form>
+            <label>Enter Complaint ID:</label>
+            <input type="text" id="search" placeholder="Enter ID like CMP101">
+            <button type="button" onclick="find()">Check Status</button>
+        </form>
+        <p id="statusout"></p>
+
+        <table id="mytable">
+            <tr>
+                <th>ID</th>
+                <th>Problem</th>
+                <th>Department</th>
+                <th>Status</th>
+                <th>Admin Action</th>
+            </tr>
+            <tr>
+                <td>CMP101</td>
+                <td>Water tap leaking</td>
+                <td>Water Dept</td>
+                <td id="s1" class="p">Pending</td>
+                <td id="b1"><button type="button" onclick="done1()">Solve</button></td>
+            </tr>
+            <tr>
+                <td>CMP102</td>
+                <td>Fan not working</td>
+                <td>Electricity Dept</td>
+                <td id="s2" class="r">Resolved</td>
+                <td>Done</td>
+            </tr>
+            <tr id="row3" style="display: none;">
+                <td id="newid1"></td>
+                <td id="newtitle1"></td>
+                <td id="newdept1"></td>
+                <td id="newstatus1" style="color: red; font-weight: bold;">Pending</td>
+                <td id="b3"><button type="button" onclick="done3()">Solve</button></td>
+            </tr>
+            <tr id="row4" style="display: none;">
+                <td id="newid2"></td>
+                <td id="newtitle2"></td>
+                <td id="newdept2"></td>
+                <td id="newstatus2" style="color: red; font-weight: bold;">Pending</td>
+                <td id="b4"><button type="button" onclick="done4()">Solve</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="bottom">
+        <p>Created by CSE 1st Year Student</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
